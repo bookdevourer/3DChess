@@ -62,6 +62,12 @@ public class TwoDPanel extends JPanel {
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
+		if(gui.g.cPlayer==Board.WHITE){
+			g.drawString("White's Turn", getWidth()/2-g.getFontMetrics().stringWidth("White's Turn")/2, g.getFontMetrics().getHeight());
+		}
+		if(gui.g.cPlayer==Board.BLACK){
+			g.drawString("Black's Turn", getWidth()/2-g.getFontMetrics().stringWidth("Black's Turn")/2, g.getFontMetrics().getHeight());
+		}
 		for(int z=0;z<5;z++)
 			for(int x=0;x<5;x++)
 				for(int y=0;y<5;y++){
